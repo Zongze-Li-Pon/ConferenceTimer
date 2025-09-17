@@ -34,7 +34,7 @@ function tick(){
         render();
       } else {
         running = false;
-        toggleBtn.textContent = "开始";
+        toggleBtn.textContent = "Start";
       }
     }
   }
