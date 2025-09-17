@@ -1,0 +1,24 @@
+html,body {
+  height: 100%; margin: 0;
+  background: #000; color: #00ff88;
+  font-family: -apple-system, Roboto, sans-serif;
+}
+.wrap {
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  height: 100%; gap: 20px;
+}
+.time {
+  font-size: 20vw; font-weight: bold;
+  letter-spacing: 2px;
+}
+.controls {
+  display: flex; gap: 12px; flex-wrap: wrap;
+  justify-content: center;
+}
+button, select {
+  font-size: 18px; padding: 8px 16px;
+  border-radius: 10px; border: none;
+}
+button { background: #222; color: #eee; }
+button#toggle { background: #2b8a3e; color: #fff; }
