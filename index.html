@@ -1,62 +1,31 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="utf-8">
-  <title>Conference Countdown</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>15 分钟倒计时</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="controls" id="panel">
-    <div class="main-buttons">
-      <button class="primary" id="btnToggle">Start</button>
-      <button class="gray" id="btnReset">Reset</button>
-      <label><input type="checkbox" id="chkLoop" checked> Auto-loop</label>
-      <label><input type="checkbox" id="chkSound" checked> Sound on finish</label>
-    </div>
-
-    <span class="spacer"></span>
-
-    <fieldset>
-      <legend>Duration</legend>
-      <div class="row">
-        <label>Min <input type="number" id="durMin" min="0" value="15"></label>
-        <label>Sec <input type="number" id="durSec" min="0" max="59" value="0"></label>
-      </div>
-    </fieldset>
-
-    <fieldset>
-      <legend>Color change at</legend>
-      <div class="row">
-        <label>t1 — Min <input type="number" id="t1Min" min="0" value="1"></label>
-        <label>Sec <input type="number" id="t1Sec" min="0" max="59" value="0"></label>
-      </div>
-      <div class="row">
-        <label>t2 — Min <input type="number" id="t2Min" min="0" value="0"></label>
-        <label>Sec <input type="number" id="t2Sec" min="0" max="59" value="10"></label>
-      </div>
-    </fieldset>
-
-    <fieldset>
-      <legend>Colors</legend>
-      <div class="row">
-        <label>Background (Normal) <input type="color" id="cBgNormal" value="#000000"></label>
-        <label>Background (≤ t1) <input type="color" id="cBgT1" value="#7a6b00"></label>
-        <label>Background (≤ t2) <input type="color" id="cBgT2" value="#8a1c1c"></label>
-      </div>
-      <div class="row">
-        <label>Digits <input type="color" id="cDigits" value="#00ff8a"></label>
-      </div>
-    </fieldset>
-  </div>
-
-  <div class="wrap" id="root">
+  <div class="wrap">
     <div class="time" id="clock">15:00</div>
-    <div class="bar" id="bar" style="width:100%"></div>
+    <div class="controls">
+      <button id="toggle">开始</button>
+      <button id="reset">重置</button>
+      <label>
+        时长：
+        <select id="mins">
+          <option>5</option>
+          <option>10</option>
+          <option selected>15</option>
+          <option>20</option>
+          <option>25</option>
+          <option>30</option>
+        </select> 分
+      </label>
+      <label><input type="checkbox" id="loop" checked> 自动循环</label>
+    </div>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
