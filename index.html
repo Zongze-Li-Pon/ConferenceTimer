@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>15 分钟倒计时</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="time" id="clock">15:00</div>
+    <div class="controls">
+      <button id="toggle">开始</button>
+      <button id="reset">重置</button>
+      <label>
+        时长：
+        <select id="mins">
+          <option>5</option>
+          <option>10</option>
+          <option selected>15</option>
+          <option>20</option>
+          <option>25</option>
+          <option>30</option>
+        </select> 分
+      </label>
+      <label><input type="checkbox" id="loop" checked> 自动循环</label>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
