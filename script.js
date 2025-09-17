@@ -52,7 +52,7 @@ function beep(){
 
 toggleBtn.onclick = () => {
   running = !running;
-  toggleBtn.textContent = running ? "暂停" : "开始";
+  toggleBtn.textContent = running ? "Pause" : "Start";
   last = Date.now();
   tick();
 };
@@ -60,7 +60,7 @@ resetBtn.onclick = () => {
   running = false;
   remain = total;
   render();
-  toggleBtn.textContent = "开始";
+  toggleBtn.textContent = "Start";
 };
 minsSel.onchange = () => {
   total = parseInt(minsSel.value,10)*60;
